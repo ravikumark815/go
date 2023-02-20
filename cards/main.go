@@ -1,7 +1,21 @@
 package main
 
-import "fmt"
+var deckSize int
 
 func main() {
-	fmt.Println("Welcome to the Cards Project!")
+	// var card string
+	// card = "Ace of Spades"
+	// card := "Ace of Spades"
+	// fmt.Println(card)
+
+	// card := newCard()
+	// fmt.Println(card)
+
+	cards := newDeck()
+
+	cards.print()
+}
+
+func newCard() string {
+	return "Five of Diamonds"
 }
