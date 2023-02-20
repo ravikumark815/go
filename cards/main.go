@@ -1,5 +1,7 @@
 package main
 
+// import "fmt"
+
 var deckSize int
 
 func main() {
@@ -12,13 +14,6 @@ func main() {
 	// fmt.Println(card)
 
 	cards := newDeck()
-
-	hand, remainingCards := deal(cards, 5)
-
-	hand.print()
-	remainingCards.print()
-}
-
-func newCard() string {
-	return "Five of Diamonds"
+	// hand, remainingCards := deal(cards, 5)
+	cards.saveToFile("my_cards")
 }
