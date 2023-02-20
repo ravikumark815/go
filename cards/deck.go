@@ -30,3 +30,9 @@ func (d deck) print() {
 func (d deck) shuffle() string{
 	return "Shuffled"
 }
+
+// Takes deck and handSize as arguments
+// Returns two values; both of type deck
+func deal(d deck, handSize int) (deck, deck) {
+	return d[:handSize], d[handSize:]
+}
