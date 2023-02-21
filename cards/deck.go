@@ -5,6 +5,8 @@ import (
 	"strings"
 	"io/ioutil"
 	"os"
+	"math/rand"
+	"time"
 )
 
 // Create a new type of 'deck' 
@@ -32,8 +34,13 @@ func (d deck) print() {
 	}
 }
 
-func (d deck) shuffle() string{
-	return "Shuffled"
+func (d deck) shuffle() {
+	source := rand.NewSource(time.Now().UnixNano())
+	r := rand.New(source)
+	for i := range d {
+		newPosition := r.Intn(len(d) - 1)
+		d[i], d[newPosition] = d[newPosition], d[i]
+	}
 }
 
 // Takes deck and handSize as arguments
