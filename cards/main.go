@@ -13,7 +13,9 @@ func main() {
 	// card := newCard()
 	// fmt.Println(card)
 
-	cards := newDeck()
+	// cards := newDeck()
 	// hand, remainingCards := deal(cards, 5)
-	cards.saveToFile("my_cards")
+	// cards.saveToFile("my_cards")
+	cards := newDeckFromFile("my_cards")
+	cards.print()
 }
