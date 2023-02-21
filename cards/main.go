@@ -1,6 +1,6 @@
 package main
 
-import "fmt"
+// import "fmt"
 
 var deckSize int
 
@@ -18,7 +18,7 @@ func main() {
 	// cards.saveToFile("my_cards")
 	cards := newDeckFromFile("my_cards")
 	cards.print()
-	fmt.Println("\n\n...Shuffling...\n\n")
+	// fmt.Println("\n\n...Shuffling...\n\n")
 	cards.shuffle()
 	cards.print()
 }
